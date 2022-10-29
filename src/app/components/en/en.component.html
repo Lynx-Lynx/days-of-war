@@ -1,0 +1,44 @@
+<div class="wrapper">
+  <div class="overlay">
+    <header class="header">
+      <div class="container">
+        <div class="header_content">
+          <nav class="languages">
+            <ul class="languages_list">
+              <li class="languages_language">
+                <a id="UA" class="language_link" routerLink="/ua" routerLinkActive="active" ariaCurrentWhenActive="page">UA</a>
+              </li>
+              <li>
+                <a class="logo" href="https://ukraine.ua">
+                  <img class="logo_img" src="./assets/img/Coat_of_Arms.png" alt="coat-of-arms">
+                </a>
+              </li>
+              <li class="languages_language">
+                <a id="EN" class="language_link">EN</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="main">
+      <div class="container">
+        <div class="main_content">
+          <div class="main_title">
+            <h1>UKRAINE</h1>
+          </div>
+          <div class="main_subtitle">
+            <h3 class="main_date">{{date}}</h3>
+          </div>
+          <div class="main_text">
+            <h2>
+              Today is the <span class="main_text-days">{{days}}</span> day of the war.
+            </h2>
+            <div class="main__precise-time">({{preciseTime}})</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
