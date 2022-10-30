@@ -59,15 +59,15 @@ export class DateService {
 
     if (diff.days > 1) {
       dateString.daysEN = 'days';
-      dateString.daysUA = diff.months < 5 ? 'дні' : 'днів';
+      dateString.daysUA = diff.days < 5 ? 'дні' : 'днів';
     };
 
-    const yearsEN = diff.years ? diff.years + ` ${dateString.yearsEN} ` : '';
-    const monthsEN = diff.months ? diff.months + ` ${dateString.monthsEN} ` : '';
+    const yearsEN = diff.years ? diff.years + ` ${dateString.yearsEN}` + `${!diff.months && !diff.days ? '' : ', '}` : '';
+    const monthsEN = diff.months ? diff.months + ` ${dateString.monthsEN}` + `${!diff.days ? '' : ', '}` : '';
     const daysEN = diff.days ? diff.days + ` ${dateString.daysEN}` : '';
 
-    const yearsUA = diff.years ? diff.years + ` ${dateString.yearsUA} ` : '';
-    const monthsUA = diff.months ? diff.months + ` ${dateString.monthsUA} ` : '';
+    const yearsUA = diff.years ? diff.years + ` ${dateString.yearsUA}` + `${!diff.months && !diff.days ? '' : ', '}` : '';
+    const monthsUA = diff.months ? diff.months + ` ${dateString.monthsUA}` + `${!diff.days ? '' : ', '}` : '';
     const daysUA = diff.days ? diff.days + ` ${dateString.daysUA}` : '';
 
     return lang === 'en' 

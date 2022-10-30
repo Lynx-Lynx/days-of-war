@@ -13,7 +13,7 @@ export class UaComponent {
   public preciseTime: string;
 
   constructor(private dateService: DateService) { 
-    this.date = this.dateService.today.locale('uk').format('LL');
+    this.date = this.dateService.today.clone().locale('uk').format('LL');
     this.days = this.dateService.getDaysDifference();
     this.preciseTime = this.dateService.getPreciseTimeDifference('ua');
   }
